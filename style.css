@@ -206,10 +206,10 @@ input[type="text"]:focus{
 }
 
 /* Bloc de gauche */
-.left-content{
+.hostings-container{
     position: relative;
-    width: 880px;
-    height: 626px;
+    min-width: 880px;
+    min-height: 626px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -218,7 +218,7 @@ input[type="text"]:focus{
     background: #f2f2f2;
 }
 
-.title-left-section{
+.hostings-container-title{
     position: absolute;
     left: 40px;
     top: 42px;
@@ -226,13 +226,13 @@ input[type="text"]:focus{
     font-size: 22px;
 }
 
-.left-grid{
+.hostings-grid{
     display: grid;
     grid-template-columns: repeat(3, 246px);
     gap: 2vw;
 }
 
-.left-card{
+.hostings-card{
     position: relative;
     width: 246px;
     height: 199px;
@@ -246,11 +246,11 @@ input[type="text"]:focus{
     transition: transform 0.2s ease-in;
 }
 
-.left-card:hover{
+.hostings-card:hover{
     transform: scale(1.05);
 }
 
-.left-card img {
+.hostings-card img {
     width: 246px;
     height: 124px;
     object-fit: cover;
@@ -299,7 +299,7 @@ input[type="text"]:focus{
 }
 
 /* Bloc de droite */
-.right-content{
+.populars-container{
     position: relative;
     width: 420px;
     height: 625px;
@@ -311,7 +311,7 @@ input[type="text"]:focus{
     background: #f2f2f2;
 }
 
-.right-content .fa-chart-line{
+.populars-container .fa-chart-line{
     width: 18px;
     height: 15.75px;
     position: absolute;
@@ -320,20 +320,20 @@ input[type="text"]:focus{
     color: #0065FC;
 }
 
-.title-right-section{
+.populars-container-title{
     position: absolute;
     top: 41px;
     left: 37px;
     font-size: 22px;
 }
 
-.right-grid{
+.populars-grid{
     display: grid;
     grid-template-rows: repeat(3, 144px);
     gap: 2vh;
 }
 
-.side-card{
+.populars-card{
     width: 343px;
     height: 144px;
     border-radius: 20px;
@@ -346,11 +346,11 @@ input[type="text"]:focus{
     transition: transform 0.2s ease-in;
 }
 
-.side-card:hover{
+.populars-card:hover{
     transform: scale(1.05);
 }
 
-.side-card img {
+.populars-card img {
     width: 137px;
     height: 144px;
     object-fit: cover;
@@ -358,7 +358,7 @@ input[type="text"]:focus{
     border: 5px solid #FFFF;
 }
 
-.infos-side-card{
+.infos-populars-card{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -369,29 +369,29 @@ input[type="text"]:focus{
     padding: 16px 22px 0 0;
 }
 
-.infos-side-card h3{
+.infos-populars-card h3{
     font-size: 16px;
     line-height: 18.78px;
     padding-bottom: 7px;
 }
 
-.infos-side-card p{ 
+.infos-populars-card p{ 
     font-size: 14px;
 }
 
-.infos-side-card span{
+.infos-populars-card span{
     position: absolute;
     bottom: 12px;
     font-size: 12px;
     color: #0065fc;
 }
 
-.infos-side-card span .fa-star:nth-child(5){
+.infos-populars-card span .fa-star:nth-child(5){
     color: #f2f2f2;
 }
 
 /* Section du bas avec les activités */
-.bottom-section{
+.activities-container{
     position: relative;
     width: 100%;
     display: flex;
@@ -401,12 +401,12 @@ input[type="text"]:focus{
     margin-bottom: 50px;
 }
 
-.bottom-section h2{
+.activities-container h2{
     padding: 50px 0 18.47px;
     font-size: 22px;
 }
 
-.horizontal-grid{
+.activities-grid{
     width: 100%;
     display: flex;
     align-items: center;
@@ -491,28 +491,28 @@ footer{
     .top-section{
         flex-direction: column;
     }
-    .left-card{
+    .hostings-card{
         width: 246px;
         height: 199px;
     }
-    .right-content{
+    .populars-container{
         width: 100%;
         height: 278px;
         margin-top: 53px;
     }
-    .side-card{
+    .populars-card{
         width: 252px;
         height: 144px;
     }
-    .side-card img{
+    .populars-card img{
         width: 106px;
         height: 144px;
     }
-    .right-grid{
+    .populars-grid{
         grid-template-columns: repeat(3, 252px);
         gap: 23px;
     }
-    .bottom-section{
+    .activities-container{
         width: 100%;
         margin: 0 auto 69px;
     }
@@ -521,8 +521,15 @@ footer{
         height: 267px;
     }
     .activities-name{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         width: 182px;
         font-size: 16px;
+        padding-left: 20px;
+    }
+    .activities-name h3{
+        padding: 0;
     }
     footer{
         width: 879.65px;
@@ -601,49 +608,49 @@ footer{
     .top-section{
         flex-direction: column-reverse;
     }
-    .right-content{
+    .populars-container{
         width: 100%;
         height: auto;
         min-height: 580px;
         border-radius: 0;
         padding: 80px 0 47px;
     }
-    .title-right-section{
+    .populars-container-title{
         left: 70px;
         padding: 0;
         margin: 0;
     }
-    .right-grid{
+    .populars-grid{
         grid-template-rows: repeat(3, auto);
         grid-template-columns: auto;
     }
-    .side-card{
+    .populars-card{
         width: 334px;
         height: 144px;
     }
-    .left-content{
+    .hostings-container{
         width: 100%;
         height: auto;
         background: #fff;
         padding-top: 71px;
         border-radius: 0;
     }
-    .left-grid{
+    .hostings-grid{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 12px;
     }
-    .left-card{
+    .hostings-card{
         width: 335px;
         height: 199px;
     }
-    .left-card img{
+    .hostings-card img{
        width: 335px;
        height: 124px; 
     }
-    .title-left-section{
+    .hostings-container-title{
         left: 50%;
         top: 26px;
         transform: translateX(-50%);
@@ -651,10 +658,10 @@ footer{
     .show-more{
         display: none;
     }
-    .activities-title{
+    .activities-container-title{
         margin: 0 auto;
     }
-    .horizontal-grid{
+    .activities-grid{
         flex-direction: column;
         gap: 24px;
         margin: 0;
