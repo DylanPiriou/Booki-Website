@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booki</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/467ca2e1f2.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Import style -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
 
-    
-    <!-- Navbar -->
-    <div class="navbar">
-      <img src="./imgs/Booki.png" alt="logo Booki">
-      <nav>
-        <a href="#hostings">hébergements</a>
-        <a href="#activities">activités</a>
-      </nav>
-    </div>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/467ca2e1f2.js" crossorigin="anonymous"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Haut de la page -->
+    <header>
+      <!-- Navbar -->
+      <div class="navbar">
+        <a href="index.html" id="logo"><img src="./imgs/Booki.png" alt="logo Booki"></a>
+        <nav>
+          <a href="#hostings">hébergements</a>
+          <a href="#activities">activités</a>
+        </nav>
+      </div>
+    </header>
     
     <!-- Contenu de la page -->
     <main>
-
       <!-- Titres de la page -->
       <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
       <p class="subtitle">En plein centre-ville ou en pleine nature</p>
@@ -39,7 +41,7 @@
       <!-- Input de recherche -->
       <form>
         <div class="location"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
-        <input type="text" placeholder="Marseille, France"/>
+        <input type="text" placeholder="Marseille, France">
         <button type="submit" class="original-find-button">Rechercher</button>
         <button type="submit" class="little-find-button"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
@@ -47,10 +49,12 @@
       <!-- Filtres -->
       <div class="filters">
         <h3 class="filters-title">Filtres</h3>
+        <div class="filters-grid">
         <button><i class="fa-solid fa-money-bill-wave"></i>Economique</button>
         <button><i class="fa-solid fa-person"></i>Familial</button>
         <button><i class="fa-solid fa-heart"></i>Romantique</button>
         <button><i class="fa-solid fa-dog"></i>Animaux autorisés</button>
+      </div>
       </div>
 
       <!-- Info -->
@@ -92,7 +96,6 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </span>
-              </h3>
               </div>
             </a>
             <a href="#" class="hostings-card">
