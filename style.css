@@ -25,10 +25,10 @@ header{
 /* Navbar */
 .navbar{
     width: 100%;
-    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 44px;
 }
 
 .navbar img{
@@ -67,7 +67,7 @@ nav a::before {
     height: 2px;
     background-color: #f2f2f2;
     position: absolute;
-    bottom: 44px;
+    bottom: 62px;
     left: 0;
     display: block;
     transition: background-color 0.3s ease-in-out;
@@ -217,12 +217,13 @@ input[type="text"]:focus{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 1vw;
-    padding: 20px 0;
+    gap: 11px;
+    padding: 40px 0;
 }
 
 .infos .fa-info{
     border-radius: 25px;
+    aspect-ratio: 1;
     width: 24px;
     height: 24px;
     display: flex;
@@ -239,12 +240,12 @@ input[type="text"]:focus{
     width: 100%;
     height: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     /* Test + clamp ? */
-    gap: clamp(20px, 100%, 100px);
-    flex-wrap: wrap;
-    padding: 20px 0;
+    /* gap: clamp(20px, 100%, 100px);
+    flex-wrap: wrap; */
+    gap: 20px;
 }
 
 /* Bloc: Hébergements à Marseille */
@@ -253,7 +254,6 @@ input[type="text"]:focus{
     width: 100%;
     max-width: 880px;
     height: auto;
-
     min-height: 626px;
     object-fit: cover;
     border-radius: 20px;
@@ -264,6 +264,7 @@ input[type="text"]:focus{
     background: #f2f2f2;
 /* Test */
     padding: 93px 40px 40px;
+    gap: 20px;
 }
 
 .hostings-container-title{
@@ -293,6 +294,7 @@ input[type="text"]:focus{
 .hostings-card{
     position: relative;
     flex: 1;
+    width: 100%;
     max-width: 246px;
     height: 199px;
     border-radius: 20px;
@@ -349,13 +351,11 @@ input[type="text"]:focus{
 
 .show-more{
     position: absolute;
-    left: 5%;
-    right: 82.84%;
-    top: 89.3%;
-    bottom: 7.35%;
+    left: 44px;
+    bottom: 46px;
     font-size: 18px;
     font-weight: 700;
-    padding: 20px;
+    padding-top: 40px;
     white-space: nowrap;
 }
 
@@ -427,7 +427,7 @@ input[type="text"]:focus{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: first baseline;
+    justify-content: baseline;
     flex-grow: 1;
     width: 169px;
     padding: 16px 22px 0 0;
@@ -656,33 +656,38 @@ footer{
     nav a:active::before {
         background-color: #0065FC;
     }
+    .header-section{
+        padding: 0 5.2vw;
+    }
     h1{
-        width: 80%;
-        margin: 0 auto;
-        padding: 40px 0 20px;
+        width: 100%;
+        padding: 40px 0 0;
+        /* margin: 0 auto; */
+        /* padding: 40px 0 20px; */
     }
     .subtitle{
-        width: 80%;
+        /* test */
+        width: 100%;
         margin: 0 auto;
-        padding: 0 0 10px;
+        padding: 10px 0;
     }
     form{
         justify-content: center;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
     }
     .original-find-button{
         display: none;
     }
     .little-find-button{
         display: block;
+        margin-left: -40px;
     }
     .filters{
         flex-direction: column;
     }
     .filters-title{
-        width: 80%;
-        margin: 0 auto;
-        padding: 40px 0 10px;
+        width: 100%;
+        padding: 20px 0 10px;
     }
     .filters-grid{
         width: 100%;
@@ -691,7 +696,7 @@ footer{
         place-items: center;
         grid-template-columns: repeat(2, 160px);
         grid-template-rows: auto;
-        gap: 2vw;
+        gap: 3vw;
         padding-bottom: 40px;
 
     }
@@ -708,9 +713,8 @@ footer{
         font-size: 18px;
     }
     .infos{
-        width: 80%;
-        margin: 0 auto;
-        padding: 0;
+        width: 100%;
+        padding: 0 0 40px;
     }
     .top-section{
         flex-direction: column-reverse;
@@ -720,10 +724,12 @@ footer{
         height: auto;
         min-height: 580px;
         border-radius: 0;
-        padding: 80px 0px 47px;
+        padding: 80px 0 47px;
+        margin: 0;
     }
     .populars-grid{
         flex-direction: column;
+        gap: 10px;
     }
     .populars-card{
         width: 334px;
@@ -733,7 +739,7 @@ footer{
         width: 100%;
         height: auto;
         background: #fff;
-        padding: 80px 0 47px;
+        padding: 80px 0 0;
         border-radius: 0;
     }
     .hostings-grid{
@@ -745,12 +751,12 @@ footer{
     }
     .hostings-card{
         width: 100%;
-        max-width: 335px;
+        min-width: 335px;
         height: 199px;
     }
     .hostings-card img{
        width: 335px;
-       height: 124px; 
+       min-height: 124px; 
     }
     .infos-card{
         width: 335px;
@@ -758,20 +764,18 @@ footer{
     .show-more{
         display: none;
     }
-    .populars-grid{
-        gap: 10px;
-    }
     .activities-container-title{
+        width: 80%;
         margin: 0 auto;
     }
     .activities-grid{
         flex-direction: column;
         gap: 24px;
         margin: 0;
-        padding: 0;
+        padding: 0 20px;
     }
     .activities-card{
-        width: 334px;
+        min-width: 334px;
         height: 190px;
     }
     .activities-name{
