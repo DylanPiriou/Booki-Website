@@ -12,7 +12,7 @@ body{
     font-family: 'Raleway', sans-serif;
     background: #fff;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 50px;
 }
 
 /* Bloc avec l'entête du site */
@@ -93,10 +93,12 @@ main{
 
 /* Titres de la page */
 h1{
+    width: 100%;
     font-size: 22px;
 }
 
 .subtitle{
+    width: 100%;
     padding: 15px 0;
 }
 
@@ -189,7 +191,7 @@ input[type="text"]:focus{
     gap: 1vw;
 }
 
-.filters h3{
+.filters-title{
     font-size: 18px;
 }
 
@@ -369,11 +371,9 @@ input[type="text"]:focus{
 }
 
 .populars-container .fa-chart-line{
-    width: 18px;
-    height: 15.75px;
     position: absolute;
-    top: 39px;
-    right: 40px;
+    top: 46px;
+    right: 42px;
     color: #0065FC;
 }
 
@@ -537,7 +537,7 @@ footer{
 
 .footer-column h3{
     font-size: 18px;
-    padding: 43px 0 20px;
+    padding: 45px 0 6px;
 }
 
 .footer-column a{
@@ -560,6 +560,10 @@ footer{
     .hostings-container{
         max-width: 100%;
     }
+    .hostings-card{
+        width: 246px;
+        height: 199px;
+    }
     .populars-container{
         width: 100%;
         min-height: 278px;
@@ -581,11 +585,6 @@ footer{
         width: 106px;
         height: 144px;
     }
-    .hostings-card{
-        width: 246px;
-        height: 199px;
-    }
-    
     .activities-container{
         width: 100%;
         margin: 0 auto 69px;
@@ -617,6 +616,12 @@ footer{
         padding: 0 20px 30px 70.21px;
         gap: 82px;
         margin: 0 auto;
+    }
+    /* Suppression des effets au hover */
+    .hostings-card:hover,
+    .populars-card:hover,
+    .activities-card:hover img{
+        transform: none;
     }
 }
 
@@ -653,13 +658,9 @@ footer{
         padding: 0 20px;
     }
     h1{
-        width: 100%;
         padding: 31px 0 0;
     }
     .subtitle{
-        /* test */
-        width: 100%;
-        margin: 0 auto;
         padding: 13px 0 16px;
     }
     form{
@@ -718,6 +719,14 @@ footer{
         margin: 0;
         padding: 80px 20px 47px;
     }
+    .populars-container .fa-chart-line{
+        top: 35px;
+        right: 21px;
+    }
+    .populars-container-title{
+        top: 28px;
+        left: 20px;
+    }
     .populars-grid{
         gap: 10px;
     }
@@ -729,7 +738,11 @@ footer{
         height: auto;
         background: #fff;
         border-radius: 0;
-        padding: 80px 20px 40px;
+        padding: 71px 20px 40px;
+    }
+    .hostings-container-title{
+        top: 26px;
+        left: 20px;
     }
     .hostings-grid{
         display: flex;
@@ -754,8 +767,8 @@ footer{
         display: none;
     }
     .activities-container-title{
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
+        padding: 50px 0 34px 20px;
     }
     .activities-grid{
         flex-direction: column;
