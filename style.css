@@ -454,11 +454,11 @@ input[type="text"]:focus{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
-.activities-container h2{
-    padding: 50px 0 30px;
+.activities-container-title{
+    padding: 60px 0 30px;
     font-size: 22px;
 }
 
@@ -565,6 +565,7 @@ footer{
         min-height: 278px;
         height: auto;
         margin-top: 53px;
+        padding: 86px 10px 48px;
     }
     .populars-grid{
         flex-direction: row;
@@ -588,6 +589,9 @@ footer{
     .activities-container{
         width: 100%;
         margin: 0 auto 69px;
+    }
+    .activities-container-title{
+        padding: 70px 0 34px
     }
     .activities-card{
         width: 182px;
