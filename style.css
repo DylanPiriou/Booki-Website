@@ -24,14 +24,17 @@ header{
 
 /* Navbar */
 .navbar{
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 44px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 5px;
+
 }
 
-.navbar img{
+.navbar a img{
     width: 61.09px;
     height: 19px;
 }
@@ -40,10 +43,18 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
     gap: 2vw;
 }
 
 nav a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     text-transform: capitalize;
     color: black;
@@ -55,21 +66,15 @@ nav a:focus{
     color: #0065FC;
 }
 
-nav a{
-    text-align: center;
-    width: 100%;
-    position: relative;
-}
-
 nav a::before {
+    position: absolute;
+    display: block;
     content: "";
     width: 100%;
     height: 2px;
-    background-color: #f2f2f2;
-    position: absolute;
-    bottom: 62px;
+    top: 0;
     left: 0;
-    display: block;
+    background-color: #f2f2f2;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -89,7 +94,6 @@ main{
 /* Titres de la page */
 h1{
     font-size: 22px;
-    padding-top: 30px;
 }
 
 .subtitle{
@@ -123,15 +127,16 @@ form {
 }
 
 input[type="text"]{
-    width: 332px;
+    width: 100%;
+    max-width: 332px;
     height: 49px;
     border: 1px solid #f2f2f2;
     font-size: 18px;
     font-weight: 700;
-    padding-left: 40px;
+    padding-left: 67px;
     background: #fff;
     border-radius: 15px;
-    margin-left: -20px;
+    margin-left: -50px;
 }
 
 input[type="text"]::placeholder{
@@ -157,7 +162,7 @@ input[type="text"]:focus{
 
 .original-find-button{
     padding: 14px 16px;
-    margin-left: -60px;
+    margin-left: -40px;
 }
 
 .little-find-button{
@@ -174,10 +179,7 @@ input[type="text"]:focus{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-}
-
-.filters-title{
-    padding-right: 1vw;
+    gap: 1vw;
 }
 
 .filters-grid{
@@ -192,7 +194,14 @@ input[type="text"]:focus{
 }
 
 .filters button{
-    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    min-height: 50px;
+    padding: 10px 24.5px;
     border-radius: 25px;
     border: 2px solid #d9d9d9;
     background: none;
@@ -204,7 +213,6 @@ input[type="text"]:focus{
 }
 
 .filters button i {
-    padding: 5px;
     color: #0065fc;
 }
 
@@ -223,7 +231,7 @@ input[type="text"]:focus{
 
 .infos .fa-info{
     border-radius: 25px;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     width: 24px;
     height: 24px;
     display: flex;
@@ -242,9 +250,6 @@ input[type="text"]:focus{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    /* Test + clamp ? */
-    /* gap: clamp(20px, 100%, 100px);
-    flex-wrap: wrap; */
     gap: 20px;
 }
 
@@ -262,8 +267,7 @@ input[type="text"]:focus{
     align-items: center;
     justify-content: flex-start;
     background: #f2f2f2;
-/* Test */
-    padding: 93px 40px 40px;
+    padding: 93px 10px 40px;
     gap: 20px;
 }
 
@@ -278,11 +282,6 @@ input[type="text"]:focus{
 .hostings-grid{
     width: 100%;
     height: 100%;
-    /* place-items: center;
-    display: grid;
-    /* grid-template-columns: repeat(3, auto); */
-    /* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
-    /* gap: 12px; */ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -320,9 +319,6 @@ input[type="text"]:focus{
 }
 
 .infos-card{
-    /* position: absolute;
-    bottom: 32px;
-    left: 16px; */
     position: relative;
     padding: 4px 0 32px 16px;
 }
@@ -368,7 +364,7 @@ input[type="text"]:focus{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 93px 40px 40px;
+    padding: 93px 10px 40px;
     background: #f2f2f2;
 }
 
@@ -389,9 +385,6 @@ input[type="text"]:focus{
 }
 
 .populars-grid{
-    /* display: grid;
-    grid-template-rows: repeat(3, auto);
-    gap: 2vh; */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -427,7 +420,6 @@ input[type="text"]:focus{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: baseline;
     flex-grow: 1;
     width: 169px;
     padding: 16px 22px 0 0;
@@ -558,13 +550,15 @@ footer{
     .little-find-button{
         display: none;
     }
+    .filters{
+        flex-wrap: wrap;
+    }
     .top-section{
         flex-direction: column;
-        /* test */
         gap: 0;
     }
     .hostings-container{
-        width: 100%;
+        max-width: 100%;
     }
     .populars-container{
         width: 100%;
@@ -627,8 +621,14 @@ footer{
         padding: 0;
     }
     .navbar{
-        flex-direction: column;
-        margin-top: 21px;
+        height: 100%;
+    }
+    .navbar a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 100%;
     }
     nav{
         width: 100%;
@@ -639,37 +639,24 @@ footer{
         width: 100%;
         position: relative;
     }
-
     nav a::before {
-        content: "";
-        width: 100%;
         height: 3px;
-        background-color: #f2f2f2;
-        position: absolute;
-        top: 35px;
+        bottom: 0;
         left: 0;
-        transition: background-color 0.3s ease-in-out;
-    }
-    
-    nav a:hover::before,
-    nav a:focus::before,
-    nav a:active::before {
-        background-color: #0065FC;
+        top: unset;
     }
     .header-section{
-        padding: 0 5.2vw;
+        padding: 0 20px;
     }
     h1{
         width: 100%;
-        padding: 40px 0 0;
-        /* margin: 0 auto; */
-        /* padding: 40px 0 20px; */
+        padding: 31px 0 0;
     }
     .subtitle{
         /* test */
         width: 100%;
         margin: 0 auto;
-        padding: 10px 0;
+        padding: 13px 0 16px;
     }
     form{
         justify-content: center;
@@ -687,34 +674,34 @@ footer{
     }
     .filters-title{
         width: 100%;
-        padding: 20px 0 10px;
+        padding: 14px 0 15px;
     }
     .filters-grid{
         width: 100%;
         display: grid;
         justify-content: center;
         place-items: center;
-        grid-template-columns: repeat(2, 160px);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
-        gap: 3vw;
+        gap: 14px;
         padding-bottom: 40px;
 
     }
     .filters button{
-        width: 160px;
+        width: 100%;
         height: 50px;
         font-size: 11px;
-        display: flex;
-        align-items: center;
         justify-content: flex-start;
+        padding: 0 0 0 13px;
         margin: 0 20px;
+        gap: 5px;
     }
     .filters button i{
         font-size: 18px;
     }
     .infos{
         width: 100%;
-        padding: 0 0 40px;
+        padding: 0 0 17px;
     }
     .top-section{
         flex-direction: column-reverse;
@@ -724,23 +711,21 @@ footer{
         height: auto;
         min-height: 580px;
         border-radius: 0;
-        padding: 80px 0 47px;
         margin: 0;
+        padding: 80px 20px 47px;
     }
     .populars-grid{
-        flex-direction: column;
         gap: 10px;
     }
     .populars-card{
-        width: 334px;
-        height: 144px;
+        width: 100%;
     }
     .hostings-container{
         width: 100%;
         height: auto;
         background: #fff;
-        padding: 80px 0 0;
         border-radius: 0;
+        padding: 80px 20px 40px;
     }
     .hostings-grid{
         display: flex;
@@ -751,15 +736,15 @@ footer{
     }
     .hostings-card{
         width: 100%;
-        min-width: 335px;
+        max-width: 100%;
         height: 199px;
     }
     .hostings-card img{
-       width: 335px;
-       min-height: 124px; 
+       width: 100%;
+       height: 124px; 
     }
     .infos-card{
-        width: 335px;
+        width: 100%;
     }
     .show-more{
         display: none;
@@ -775,7 +760,8 @@ footer{
         padding: 0 20px;
     }
     .activities-card{
-        min-width: 334px;
+        width: 100%;
+        max-width: 100%;
         height: 190px;
     }
     .activities-name{
