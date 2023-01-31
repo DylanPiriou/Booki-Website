@@ -536,7 +536,7 @@ footer{
     gap: 12px;
 }
 
-.footer-column h3{
+.footer-column h2{
     font-size: 18px;
     padding: 45px 0 6px;
 }
@@ -607,7 +607,6 @@ footer{
         padding: 0;
     }
     footer{
-        width: 100%;
         max-width: 879.65px;
         height: 100%;
         min-height: 225px;
@@ -784,7 +783,6 @@ footer{
     }
     footer{
         height: auto;
-        width: 100%;
         flex-direction: column;
         margin: 0;
         padding: 0 0 61px 30px;
