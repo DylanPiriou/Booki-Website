@@ -153,8 +153,9 @@ input[type="text"]:focus{
     outline: none;
 }
 
-.original-find-button,
-.little-find-button{
+.original-find-button{
+    padding: 14px 16px;
+    margin-left: -40px;
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
     background: #0065fc;
@@ -165,18 +166,9 @@ input[type="text"]:focus{
     cursor: pointer;
 }
 
-.original-find-button{
-    padding: 14px 16px;
-    margin-left: -40px;
-}
-
-.little-find-button{
+.original-find-button i{
     display: none;
-    margin-left: -50px;
-    width: 49px;
-    height: 49px;
 }
-
 
 /* Filtres */
 .filters{
@@ -667,12 +659,11 @@ footer{
         justify-content: center;
         padding-bottom: 20px;
     }
-    .original-find-button{
+    .original-find-button p{
         display: none;
     }
-    .little-find-button{
+    .original-find-button i{
         display: block;
-        margin-left: -40px;
     }
     .filters{
         flex-direction: column;
