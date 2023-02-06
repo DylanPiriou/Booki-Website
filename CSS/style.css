@@ -388,6 +388,7 @@ input[type="text"]:focus{
 
 .populars-card{
     width: 100%;
+    min-width: 343px;
     height: 144px;
     border-radius: 20px;
     display: flex;
@@ -462,24 +463,23 @@ input[type="text"]:focus{
     width: 100%;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .activities-card{
     position: relative;
-    width: 100%;
+    width: 25%;
     max-width: 302px;
     height: 445px;
     border-radius: 20px;
     box-shadow: 0 0 10px #d9d9d9;
     overflow: hidden;
-    margin: 0 9px;
 }
 
 .activities-card img{
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -496,13 +496,15 @@ input[type="text"]:focus{
     bottom: -0.49px;
     width: 100%;
     height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     background: #ffff;
-    border-radius: 0px 0px 20px 20px;
 }
 
 .activities-name h3{
-    padding: 20px 0 21px 19px;
     font-size: 16px;
+    padding-left: 1.1vw;
     color: black;
 }
 
@@ -516,9 +518,7 @@ footer{
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: clamp(10px, 100%, 239px);
-    flex-wrap: wrap;
+    gap: 15vw;
     padding: 0 0 30px 70px;
     background: #f2f2f2;
 }
@@ -553,34 +553,37 @@ footer{
     .hostings-container{
         max-width: 100%;
     }
-    .hostings-card{
-        width: 246px;
-        height: 199px;
-    }
     .populars-container{
         width: 100%;
         min-height: 278px;
         height: auto;
         margin-top: 53px;
-        padding: 86px 10px 48px;
+        padding: 86px 0 48px;
     }
     .populars-grid{
+        width: 95%;
         flex-direction: row;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        gap: 3%;
     }
     .populars-card{
-        width: 252px;
-        height: 144px;
+        max-width: 252px;
+        min-width: auto;
+        width: 33%;
     }
     .populars-card img{
         width: 106px;
         height: 144px;
     }
-    .activities-container{
-        width: 100%;
-        margin: 0 auto 69px;
+    .infos-populars-card{
+        padding: 16px 10px 0 0;
+    }
+    .infos-populars-card h3{
+        font-size: 1.45vmax;
+    }
+    .infos-populars-card p{
+        font-size: 1.35vmax;
     }
     .activities-container-title{
         padding: 70px 0 34px
@@ -588,22 +591,8 @@ footer{
     .activities-card{
         width: 182px;
         height: 267px;
-        margin: 0;
-    }
-    .activities-name{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 182px;
-        font-size: 16px;
-        padding-left: 20px;
-    }
-    .activities-name h3{
-        padding: 0;
     }
     footer{
-        max-width: 879.65px;
-        height: 100%;
         min-height: 225px;
         padding: 0 20px 30px 70.21px;
         gap: 82px;
@@ -719,10 +708,18 @@ footer{
         left: 20px;
     }
     .populars-grid{
+        width: 100%;
+        flex-direction: column;
         gap: 10px;
     }
     .populars-card{
-        width: 100%;
+        min-width: 100%;
+    }
+    .infos-populars-card h3{
+        font-size: 16px;
+    }
+    .infos-populars-card p{
+        font-size: 14px;
     }
     .hostings-container{
         width: 100%;
@@ -758,7 +755,7 @@ footer{
         display: none;
     }
     .activities-container-title{
-        width: 100%;
+        width: 50vw;
         padding: 50px 0 34px 20px;
     }
     .activities-grid{
@@ -773,7 +770,7 @@ footer{
         height: 190px;
     }
     .activities-name{
-        width: 100%;
+        padding-left: 20px;
     }
     footer{
         height: auto;
