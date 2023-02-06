@@ -273,7 +273,7 @@ input[type="text"]:focus{
     align-items: center;
     justify-content: flex-start;
     background: #f2f2f2;
-    padding: 93px 10px 40px;
+    padding: 93px 0 40px;
     gap: 20px;
 }
 
@@ -292,14 +292,13 @@ input[type="text"]:focus{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1vw;
     margin-bottom: 40px;
 }
 
 .hostings-card{
     position: relative;
-    flex: 1;
-    width: 100%;
+    width: 32%;
     max-width: 246px;
     height: 199px;
     border-radius: 20px;
@@ -317,7 +316,7 @@ input[type="text"]:focus{
 }
 
 .hostings-card img {
-    width: 246px;
+    width: 100%;
     height: 124px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
@@ -326,11 +325,12 @@ input[type="text"]:focus{
 
 .infos-hostings-card{
     position: relative;
-    padding: 4px 0 32px 16px;
+    padding: 4px 0 32px 12px;
 }
 
 .infos-hostings-card h3{
     font-size: 16px;
+    white-space: nowrap; 
     line-height: 18.78px;
     padding-bottom: 9px;
 }
@@ -370,7 +370,7 @@ input[type="text"]:focus{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 93px 10px 40px;
+    padding: 93px 0 40px;
     background: #f2f2f2;
 }
 
@@ -395,7 +395,7 @@ input[type="text"]:focus{
 }
 
 .populars-card{
-    width: 343px;
+    width: 100%;
     height: 144px;
     border-radius: 20px;
     display: flex;
