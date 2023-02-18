@@ -174,6 +174,7 @@ input[type="text"]:focus{
 .filters{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     gap: 1vw;
@@ -265,7 +266,7 @@ input[type="text"]:focus{
     align-items: center;
     justify-content: flex-start;
     background: #f2f2f2;
-    padding: 93px 0 40px;
+    padding: 93px 10px 40px;
     gap: 20px;
 }
 
@@ -278,19 +279,20 @@ input[type="text"]:focus{
 }
 
 .hostings-grid{
+    max-width: 800px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1vw;
+    gap: 30px 0;
     margin-bottom: 40px;
 }
 
 .hostings-card{
     position: relative;
-    width: 32%;
+    width: 33%;
     max-width: 246px;
     height: 199px;
     border-radius: 20px;
@@ -308,6 +310,7 @@ input[type="text"]:focus{
 }
 
 .hostings-card img {
+    flex-grow: 1;
     width: 100%;
     height: 124px;
     object-fit: cover;
@@ -316,15 +319,15 @@ input[type="text"]:focus{
 }
 
 .infos-hostings-card{
-    position: relative;
-    padding: 4px 0 32px 12px;
+    padding: 2px 0 11px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 .infos-hostings-card h3{
-    font-size: 16px;
-    white-space: nowrap; 
-    line-height: 18.78px;
-    padding-bottom: 9px;
+    font-size: clamp(13.5px, 1vw, 16px);
+    white-space: nowrap;
 }
 
 .infos-hostings-card p{
@@ -332,7 +335,6 @@ input[type="text"]:focus{
 }
 
 .infos-hostings-card span{
-    position: absolute;
     left: 16px;
     bottom: 11px;
     font-size: 12px;
@@ -362,7 +364,7 @@ input[type="text"]:focus{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 93px 0 40px;
+    padding: 93px 10px 40px;
     background: #f2f2f2;
 }
 
@@ -381,9 +383,10 @@ input[type="text"]:focus{
 }
 
 .populars-grid{
+    max-width: 343px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 33px;
 }
 
 .populars-card{
@@ -418,7 +421,6 @@ input[type="text"]:focus{
     flex-direction: column;
     align-items: flex-start;
     flex-grow: 1;
-    width: 169px;
     padding: 16px 22px 0 0;
 }
 
@@ -543,9 +545,6 @@ footer{
 
 /* Media Queries */
 @media screen and (max-width: 992px){
-    .filters{
-        flex-wrap: wrap;
-    }
     .top-section{
         flex-direction: column;
         gap: 0;
@@ -553,15 +552,18 @@ footer{
     .hostings-container{
         max-width: 100%;
     }
+    .infos-hostings-card h3{
+        font-size: 16px;
+    }
     .populars-container{
         width: 100%;
-        min-height: 278px;
         height: auto;
         margin-top: 53px;
-        padding: 86px 0 48px;
+        padding: 86px 10px 48px;
     }
     .populars-grid{
-        width: 95%;
+        max-width: 100%;
+        width: 100%;
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -574,10 +576,9 @@ footer{
     }
     .populars-card img{
         width: 106px;
-        height: 144px;
     }
     .infos-populars-card{
-        padding: 16px 10px 0 0;
+        padding: 16px 2px 0 0;
     }
     .infos-populars-card h3{
         font-size: 1.45vmax;
@@ -692,8 +693,6 @@ footer{
         flex-direction: column-reverse;
     }
     .populars-container{
-        width: 100%;
-        height: auto;
         min-height: 580px;
         border-radius: 0;
         margin: 0;
@@ -701,14 +700,13 @@ footer{
     }
     .populars-container .fa-chart-line{
         top: 35px;
-        right: 21px;
+        right: 20px;
     }
     .populars-container-title{
         top: 28px;
         left: 20px;
     }
     .populars-grid{
-        width: 100%;
         flex-direction: column;
         gap: 10px;
     }
@@ -722,8 +720,6 @@ footer{
         font-size: 14px;
     }
     .hostings-container{
-        width: 100%;
-        height: auto;
         background: #fff;
         border-radius: 0;
         padding: 71px 20px 40px;
@@ -733,10 +729,7 @@ footer{
         left: 20px;
     }
     .hostings-grid{
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 12px;
     }
     .hostings-card{
