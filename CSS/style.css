@@ -649,7 +649,7 @@ footer{
         justify-content: center;
         padding-bottom: 20px;
     }
-    .original-find-button p{
+    .original-find-button span{
         display: none;
     }
     .original-find-button i{
